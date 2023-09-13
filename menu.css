@@ -1,0 +1,270 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.wholeMenuContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topMenuSectionContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*height: 600px;*/
+    background-color: red;
+}
+
+.leftSideContainer{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 600px;
+    background-color: blue;
+}
+
+.rightSideContainer{
+    display: flex;
+    /*flex-direction: row;*/
+    flex-direction: column;
+    width: 700px;
+    height: 700px;
+    background-color: aqua;
+}
+
+.breakfastTitleAndLine{
+    display: flex;
+    flex-direction: column;
+}
+.breakfastTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.zig-zag-line{
+    width: 200px;
+    height: 5px;
+    background-color: black;
+}
+
+.foodContainer{
+    margin-left: 10px;
+    width: 480px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+
+}
+.nameAndPrice{
+    display: flex;
+    flex-direction: row;
+}
+.nameAndPrice h1{
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.nameAndPrice h1:nth-child(2){
+    margin-left: 5px;
+}
+.foodChoices{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+.kidsMenuAndLine{
+    display: flex;
+    flex-direction: column;
+}
+.kidsMenuTitle{
+    display: flex;
+    flex-direction: row;
+}
+.kidsMeuContainer{
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kidsMenuOption{
+    display: flex;
+    flex-direction: column;
+}
+.kidsMenuOption{
+    width: 480px;
+    background-color: yellow;
+    margin-left: 10px;
+}
+.kidsMenuOption p{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+
+
+/*LUNCH Section of the menu*/
+
+
+.lunchAndDinnerContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lunchTitleAndLine{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lunch-Dinner-foodContainer{
+    /*Make this also the whole width*/
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftSideLunch{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+.rightSideLunch{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*proble is that foodContainer in the leftSide is set to the same as in breakfast section
+seemply do what we did here at the bottom to change it to the given size*/
+
+.leftSideLunch .foodContainer{
+    width: 340px;
+}
+
+.leftSideLunch .foodContainer .nameAndPrice h1{
+    font-size: 22px;
+}
+
+.leftSideLunch .foodContainer .foodChoices{
+    font-size: 15px;
+}
+
+.flourPrice{
+    font-weight: bold;
+    font-size: 20px;
+}
+.cornPrice{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.rightSideLunch .foodContainer{
+    width: 340px;
+}
+
+.rightSideLunch .foodContainer .nameAndPrice h1{
+    font-size: 22px;
+}
+.rightSideLunch .foodContainer ,.foodChoices{
+    font-size: 15px;
+}
+
+
+#alignFajito{
+    align-items: center;
+}
+
+#flourChoice{
+    margin-bottom: 0px;
+}
+
+#cornChoice{
+    margin-bottom: 0px;
+}
+#superNachosAlign{
+    align-items: center;
+}
+
+
+
+/* Make changes here to when window reaches certain window size*/
+@media (max-width: 1210px){
+    /*update both container by making them smaller*/
+    .leftSideContainer{
+        width: 450px;
+    }
+    .rightSideContainer{
+        width: 650px;
+    }
+
+    /*now make the inside content smaller as well
+    this will be for the left side container*/
+    .foodContainer{
+        width: 430px;
+    }
+    .kidsMenuOption{
+        width: 430px;
+    }
+
+    /*now make the rightside container smaller as well by 50 px*/
+    .leftSideLunch{
+        width: 325px;
+    }
+    .rightSideLunch{
+        width: 325px;
+    }
+    .leftSideLunch .foodContainer{
+        width: 315px;
+    }
+    .rightSideLunch .foodContainer{
+        width: 315px;
+    }
+
+    .rightSideContainer{
+        height: 750px;
+    }
+
+}
+
+/*here is where we will make them into columns but keep the same size*/
+@media (max-width: 1100px){
+    .topMenuSectionContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*also at this point for the left side make them be more in the middle*/
+@media (max-width: 750px){
+
+    
+    .lunch-Dinner-foodContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .rightSideContainer{
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        height: 1300px;
+    }
+}
