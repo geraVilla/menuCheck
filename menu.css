@@ -268,3 +268,15 @@ seemply do what we did here at the bottom to change it to the given size*/
         height: 1300px;
     }
 }
+
+/*to fix the background of red to fit whole screen
+you will need to do width: 700px 
+meanign start using pixels instead of using 100%
+probably becuase that is where phones window size use, browser 
+are the one who use percentages*/
+@media (max-width: 700px){
+    .topMenuSectionContainer{
+        width: 700px;
+        align-items: center;
+    }
+}
